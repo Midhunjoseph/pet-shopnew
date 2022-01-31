@@ -1,0 +1,151 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-2 mt-2 ">
+    <div class="row justify-content-center align-items-center ">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration">
+          <div class="card-body p-2 p-md-4">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-3">Registration Form</h3>
+            <form #registrationForm="ngForm" (ngSubmit)="onRegistration(registrationForm.value)">
+
+              <div class="row">
+                <div class="col-md-6 mb-2">
+
+                  <div class="form-outline">
+                    <label class="form-label" for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-control form-control-lg" ngModel name="firstName" required/>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-2">
+
+                  <div class="form-outline">
+                    <label class="form-label" for="lastName">Last Name</label>
+                    <input type="text" id="lastName" class="form-control form-control-lg" ngModel name="lastName" required />
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-2">
+
+                  <div class="form-outline">
+                    <label class="form-label" for="userName">User Name</label>
+                    <input type="text" id="userName" class="form-control form-control-lg" ngModel name="userName" required/>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-2">
+
+                  <div class="form-outline">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" class="form-control form-control-lg" ngModel name="password" required />
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-2 d-flex align-items-center">
+                  <div class="form-outline datepicker w-100">
+                    <label for="birthdayDate" class="form-label">DOB</label>
+                    <input type="date" class="form-control form-control-lg" ngModel name="birthdayDate"
+                      id="birthdayDate"  required/>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="form-check form-check-inline">
+                      <p class="mb-2 pb-1">Gender </p>
+                      <input
+                        class="form-check-input" ngModel name="Gender"
+                        type="radio"
+                        id="femaleGender"
+                        value="female"
+                        checked
+                        required
+                      />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input" ngModel name="Gender"
+                        type="radio"
+                        id="maleGender"
+                        value="male"
+                        required
+                      />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input" ngModel name="Gender"
+                        type="radio"
+                        id="otherGender"
+                        value="others"
+                        required
+                      />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+
+                  </div>
+                <!-- <div class="col-6 mb-2">
+                  <div class="form-outline">
+                    <label class="form-label select-label">Gender</label>
+                    <select class="select form-control form-control-lg" ngModel name="gender">
+                      <option value="1" disabled>Choose option</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Others</option>
+                    </select>
+                  </div>
+
+                </div> -->
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 mb-2 pb-2">
+
+                  <div class="form-outline">
+                    <label class="form-label" for="emailAddress">Email</label>
+                    <input type="email" id="emailAddress" class="form-control form-control-lg" ngModel name="emailAddress" required/>
+                  </div>
+                </div>
+                <div class="row">
+                </div>
+                <div class="col-md-12 mb-2 pb-2">
+
+                  <div class="form-outline">
+                    <label class="form-label" for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" ngModel name="phoneNumber" required/>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- <div class="row">
+                  <div class="col-12">
+
+                    <select class="select form-control-lg">
+                      <option value="1" disabled>Choose option</option>
+                      <option value="2">Subject 1</option>
+                      <option value="3">Subject 2</option>
+                      <option value="4">Subject 3</option>
+                    </select>
+                    <label class="form-label select-label">Choose option</label>
+
+                  </div>
+                </div> -->
+
+              <div class="mt-4 pt-2 d-md-flex justify-content-md-end">
+                <a class="me-5" routerLink="/login">Already have an Account?</a>
+                <button class="btn btn-primary" type="submit" [disabled]="!registrationForm.valid">Register</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

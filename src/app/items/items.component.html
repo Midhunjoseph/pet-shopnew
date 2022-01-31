@@ -1,0 +1,33 @@
+<app-new-items></app-new-items>
+
+<div class="row">
+  <!-- <div *ngFor="let pet of pets; let i = index" [id]="i"> -->
+  <div class="col-xs-4 col-md-3 col-md-offset-2 mb-4 mt-4" *ngFor="let pet of pets; let i = index" [id]="i">
+    <div class="card mb-4">
+      <div class="card-header bg-light pt-0">
+        <!-- <div class="float-start"> -->
+        <h4 class="list-group-item-heading">{{ pet.name }}</h4>
+
+      </div>
+      <!-- <div class="float-end"> -->
+      <div class="card-body nav-tabs-animate nav-tabs-horizontal" data-plugin="tabs">
+        <div class="col-md-12 mb-3">
+          <p class="list-group-item-text"> {{ pet.desc }}</p>
+        </div>
+        <div class="col-md-12 mb-3">
+          <img [src]="pet.image" alt="{{pet.name}}" class="img-responsive rounded">
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="card-footer bg-light">
+        <div class="col-md-12 d-md-flex justify-content-md-end">
+          <button class="btn btn-warning me-2">Edit</button>
+          <button class="btn btn-primary float-right">Delete</button>
+        </div>
+      </div>
+      <!-- <button class="btn btn-default" (click)="onSetTo('unknown')">Set to 'unknown'</button> -->
+
+    </div>
+  </div>
+  <!-- </div> -->
+</div>

@@ -1,0 +1,5 @@
+<div class="row mt-3">
+  <div class="col-md-3 mb-3">
+      <app-home-item *ngFor="let petEl of pets" [pet]="petEl" (petSelected)="onPetSelected(petEl)"></app-home-item>
+  </div>
+</div>

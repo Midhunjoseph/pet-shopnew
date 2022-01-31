@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <app-registration *ngIf="loadedFeature ==='newAccount'"></app-registration> -->
+      <router-outlet></router-outlet>
+    </div>
+    <div class="row">
+      <div class="col-md-12 ">
+        <!-- <app-home *ngIf="loadedFeature ==='home'"></app-home> -->
+        <router-outlet></router-outlet>
+        <!-- <ng-container *ngIf="loadedFeature ==='home'">
+          <app-new-items></app-new-items>
+          <app-items *ngFor="let acc of pets; let i = index" [pet]="acc" [id]="i"></app-items> -->
+          <!-- <app-account
+                *ngFor="let acc of accounts; let i = index"
+                [account]="acc"
+                [id]="i"></app-account> -->
+        <!-- </ng-container> -->
+      </div>
+    </div>
+    <div class="col-md-12 ">
+      <!-- <app-login (featureSelected)="onNavigate($event)" *ngIf="loadedFeature === 'login'"></app-login> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
